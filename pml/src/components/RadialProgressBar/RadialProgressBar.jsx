@@ -5,9 +5,6 @@ const CircularProgress = ({ value, max }) => {
   const circumference = 2 * Math.PI * radius;
   const progress =  value / max;
   const strokeDashoffset = circumference * (1 - progress);
-  console.log(progress)
-  console.log(circumference)
-  console.log(strokeDashoffset)
   return (
     <svg width="120" height="120">
       <circle

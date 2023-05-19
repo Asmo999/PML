@@ -1,6 +1,6 @@
 import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";;
-const StepElevenVariantNative = () => {
+const StepThirteen = () => {
   return (
     <div>
       <div>
@@ -36,4 +36,4 @@ const StepElevenVariantNative = () => {
     </div>
   );
 };
-export default StepElevenVariantNative;
+export default StepThirteen;

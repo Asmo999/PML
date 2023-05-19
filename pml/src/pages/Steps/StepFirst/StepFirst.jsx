@@ -1,46 +1,53 @@
-import React from "react";
-import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
+import React, { useState, useContext,useEffect } from "react";
+import { StepContext } from "../../../StepContext";
+import Step from "../../../components/StepGenerator/StepGen";
+import steps from "../../StepsInfo";
+import StepContainer from "../../../components/StepContainer/StepContainer";
+import ProgressBar from "../../../components/RadialProgressBar/ProgressBar";
+import StepButton from "../../../components/StepButton/StepButton";
 const StepFirst = () => {
+  const { stepData, updateStepData } = useContext(StepContext);
+  const [selectedOptions, setSelectedOptions] = useState(
+    JSON.parse(sessionStorage.getItem('selectedOptions')) || {}
+  );
+
+  const [currentStep, setCurrentStep] = useState(
+    parseInt(sessionStorage.getItem('currentStep')) || 1
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
+  }, [selectedOptions]);
+
+  useEffect(() => {
+    sessionStorage.setItem('currentStep', currentStep);
+  }, [currentStep]);
+  
+  const handleOptionChange = (stepId, option) => {
+    setSelectedOptions(prevState => ({ ...prevState, [stepId]: option }));
+    updateStepData({ [`step${stepId}Data`]: option });
+  };
+
+  const buttonHandle = (direction) => {
+    if (direction === "next" && currentStep < steps.length) {
+      setCurrentStep(currentStep + 1);
+    }
+    else if (direction === "prev" && currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  }
+
   return (
     <>
-      <div>
-        <div>
-          <button>X</button>
-        </div>
-        <div>
-          <div>
-            <h3>Step 1</h3>
-            <h1>Choose the chain to deploy</h1>
-            <div>
-              <div>
-                <input type="radio" name="Binance-radio" id="Binance-radio" />
-                <label htmlFor="Binance-radio">Binance</label>
-              </div>
-              <div>
-                <input type="radio" name="Etherium-radio" id="Etherium-radio" />
-                <label htmlFor="Etherium-radio">Etherium</label>
-              </div>
-              <div>
-                <input type="radio" name="Casper-radio" id="Casper-radio" />
-                <label htmlFor="Casper-radio">Casper</label>
-              </div>
-              <div>
-                <input type="radio" name="Solana-radio" id="Solana-radio" />
-                <label htmlFor="Solana-radio">Solana</label>
-              </div>
-              <div>
-                <input type="radio" name="Cronos-radio" id="Cronos-radio" />
-                <label htmlFor="Cronos-radio">Cronos</label>
-              </div>
-            </div>
-          </div>
-          <img src="" alt="Man-LapTop-B" />
-        </div>
-        <div>
-          <CircularProgress value={1} max={14} />
-          <button>Arrow-Circle</button>
-        </div>
-      </div>
+      <StepContainer
+        steps={steps}
+        currentStep={currentStep}
+        selectedOptions={selectedOptions}
+        handleOptionChange={handleOptionChange}
+      />
+      <ProgressBar value={currentStep} max={14} />
+      <StepButton direction="prev" handleClick={buttonHandle} />
+      <StepButton direction="next" handleClick={buttonHandle} />
     </>
   );
 };
