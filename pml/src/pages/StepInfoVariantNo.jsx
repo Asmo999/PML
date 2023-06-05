@@ -9,14 +9,16 @@ const stepsVariantNo = [
       title: "NFT name and quantity",
       inputType: "file",
       inputPlaceholderNumber: "Quantity",
-      inputPlaceholder: "Name"
+      inputPlaceholder: "Name",
+      inputCheck: "Photo"
     },
     {
       id: 7,
       title: "Insert Type and Value",
       inputType: "file",
       inputPlaceholderNumber: "Value",
-      inputPlaceholder: "Type"
+      inputPlaceholder: "Type",
+      inputCheck: "Text"
     },
     {
       id: 8,

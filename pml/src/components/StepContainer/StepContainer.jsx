@@ -36,9 +36,10 @@ const StepContainer = ({
         handleOptionChange={handleOptionChange}
         inputPlaceholder={currentStepData.inputPlaceholder}
         inputPlaceholderNumber={currentStepData.inputPlaceholderNumber}
+        inputCheck={currentStepData.inputCheck}
       />
     );
-  } else {
+  } else {  
     return (
       <Step
         key={currentStep}
