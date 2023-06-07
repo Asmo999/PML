@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FileInput from "./FileInputStep.css";
+
 const FileInputStep = ({
   stepId,
   title,
@@ -9,25 +10,35 @@ const FileInputStep = ({
   handleOptionChange,
   selectedOption,
 }) => {
-  const [elements, setElements] = useState([`fileInput-${stepId}-0`]);
-
-  useEffect(() => {
-    const existingElements = Object.keys(selectedOption || {}).filter((key) =>
-      key.includes(`name`)
-    );
-  });
-
+  const initialElements = JSON.parse(localStorage.getItem(`fileInput-${stepId}`)) || [`fileInput-${stepId}-0`];
+  const [elements, setElements] = useState(initialElements);;
+  const previousStepValues = selectedOption[stepId - 1] || [];
   const onButtonClick = (id) => {
     document.getElementById(id).click();
   };
 
   const addElement = () => {
     const newId = `fileInput-${stepId}-${elements.length}`;
-    setElements((prevElements) => [...prevElements, newId]);
+    setElements((prevElements) => {
+      const updatedElements = [...prevElements, newId];
+      localStorage.setItem(`fileInput-${stepId}`, JSON.stringify(updatedElements));
+      return updatedElements;
+    });
   };
 
   const handleInputChange = (e, id, type) => {
-    handleOptionChange(`${stepId}-${id}-${type}`, e.target.value);
+    let updatedOptions = { ...selectedOption };
+    let idComponents = id.split('-');
+    let stepId = idComponents[1];
+    let index = idComponents[2];
+
+    if (!updatedOptions[stepId]) updatedOptions[stepId] = [];
+
+    if (!updatedOptions[stepId][index]) updatedOptions[stepId][index] = {};
+
+    updatedOptions[stepId][index][type] = e.target.value;
+
+    handleOptionChange(stepId, updatedOptions[stepId]);
   };
 
   const handleFileChange = (e, id) => {
@@ -35,7 +46,18 @@ const FileInputStep = ({
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        handleOptionChange(`${stepId}-${id}-file`, reader.result);
+        let updatedOptions = { ...selectedOption };
+        let idComponents = id.split('-'); 
+        let stepId = idComponents[1];
+        let index = idComponents[2];
+
+        if (!updatedOptions[stepId]) updatedOptions[stepId] = [];
+
+        if (!updatedOptions[stepId][index]) updatedOptions[stepId][index] = {};
+
+        updatedOptions[stepId][index]['file'] = reader.result;
+
+        handleOptionChange(stepId, updatedOptions[stepId]);
       };
       reader.readAsDataURL(file);
     }
@@ -48,16 +70,14 @@ const FileInputStep = ({
       </div>
       <div>
         <h1>Step {stepId}</h1>
-        <h3>{title}</h3>
+        <h3>{title}</h3> 
+        
         <div className="scroll-container">
           {elements.map((id, index) => {
-            const selectedOptions = JSON.parse(
-              sessionStorage.getItem("selectedOptions")
-            );
-            const storedValue =
-              selectedOptions[
-                `${stepId - 1}-fileInput-${stepId - 1}-${index}-name`
-              ];
+            const inputs = selectedOption[stepId] || [];
+            const nameValue = inputs[index] ? inputs[index]['name'] || '' : '';
+            const placeholderValue = inputs[index] ? inputs[index][inputPlaceholder] || '' : '';
+            const numberValue = inputs[index] ? inputs[index][inputPlaceholderNumber] || '' : '';
 
             return (
               <div key={id}>
@@ -76,13 +96,7 @@ const FileInputStep = ({
                 )}
                 <input
                   type="text"
-                  value={
-                    inputCheck === "Photo"
-                      ? selectedOption[
-                          `${stepId}-fileInput-${stepId}-${index}-name`
-                        ] || ""
-                      : storedValue
-                  }
+                  value={nameValue}
                   onChange={(e) => handleInputChange(e, id, "name")}
                   readOnly={inputCheck !== "Photo"}
                 />
@@ -90,11 +104,7 @@ const FileInputStep = ({
                     <input
                     type="text"
                     placeholder={inputPlaceholder}
-                    value={
-                      selectedOption[
-                        `${stepId}-fileInput-${stepId}-${index}-${inputPlaceholder}`
-                      ] || ""
-                    }
+                    value={placeholderValue}
                     onChange={(e) => handleInputChange(e, id, `${inputPlaceholder}`)}
                   />
                     )}
@@ -102,11 +112,7 @@ const FileInputStep = ({
                 <input
                   type="number"
                   placeholder={inputPlaceholderNumber}
-                  value={
-                    selectedOption[
-                      `${stepId}-fileInput-${stepId}-${index}-${inputPlaceholderNumber}`
-                    ] || ""
-                  }
+                  value={numberValue}
                   onChange={(e) => handleInputChange(e, id, `${inputPlaceholderNumber}`)}
                 />
               </div>

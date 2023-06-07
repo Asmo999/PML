@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ConfirmationStep = ({ stepId, title, handleConfirm, imageSrc }) => {
   const Image = <img src={imageSrc} alt={`Step ${stepId}`} />;
+  const [buttonSave,setButtonSave] = useState()
   return (
     <div>
       <div>

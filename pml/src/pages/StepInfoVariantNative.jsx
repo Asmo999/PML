@@ -3,40 +3,32 @@ import Step2Image from "../../src/images/stepSecond.svg";
 import Step3Image from "../../src/images/stepThird.svg";
 import Step8Image from "../../src/images/stepSeventh.svg";
 import Step9Image from "../../src/images/stepPayment.svg";
-const stepsVariantNo = [
+import Step10Image from "../../src/images/stepTen.svg";
+const stepsVariantNative = [
     {
-      id: 6,
-      title: "NFT name and quantity",
-      inputType: "file",
-      inputPlaceholderNumber: "Quantity",
-      inputPlaceholder: "Name",
-      inputCheck: "Photo"
+      id: 10,
+      title: "Transaction royalty",
+      options: ["Without royalty", "Royalty enabled"],
+      photoPosition: "before",
+      inputType: "radio",
+      imageSrc: Step10Image,
     },
     {
-      id: 7,
-      title: "Insert Type and Value",
-      inputType: "tokenPTV",
+      id: 11,
+      title: "Token Price",
+      inputType: "file",
       inputPlaceholderNumber: "Value",
       inputPlaceholder: "Type",
       inputCheck: "Text"
     },
     {
-      id: 8,
+      id: 12,
       title: "Are NFT-s 100% pre-minted?",
       options: ["Yes,push it on the market", "No,add custom features"],
       photoPosition: "after",
       inputType: "radio",
       inputPlaceholder: "Smart Contract Standart",
-      imageSrc: Step8Image,
-    },
-    {
-      id: 9,
-      title: "Choose payment method",
-      photoPosition: "before",
-      inputType: "text",
-      tokenConfirm: "token",
-      inputPlaceholder: "Symbol",
       imageSrc: Step9Image,
-    } 
+    },
 ]
-export default stepsVariantNo
+export default stepsVariantNative
