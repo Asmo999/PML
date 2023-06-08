@@ -1,13 +1,12 @@
 import React from "react";
-
 const SmartContract = () => {
   return (
     <>
       <div>
         <div>
-          <button>X</button>
+          <button><img src="" alt="decline"/></button>
         </div>
-        <div>
+        <div >
           <div>
             <h1>Add Wallet before start</h1>
             <button>Add Wallet</button>
