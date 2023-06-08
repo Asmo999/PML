@@ -5,9 +5,6 @@ const StepThree = () => {
     <>
       <div>
         <div>
-          <div>
-            <p>yay</p>
-          </div>
           <button>X</button>
         </div>
         <div>

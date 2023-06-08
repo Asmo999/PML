@@ -3,7 +3,7 @@ import Step2Image from "../../src/images/stepSecond.svg";
 import Step3Image from "../../src/images/stepThird.svg";
 import Step8Image from "../../src/images/stepSeventh.svg";
 import Step9Image from "../../src/images/stepPayment.svg";
-import Step10Image from "../../src/images/stepTen.svg";
+// import Step10Image from "../../src/images/stepTen.svg";
 const stepsVariantNative = [
     {
       id: 10,
@@ -11,7 +11,7 @@ const stepsVariantNative = [
       options: ["Without royalty", "Royalty enabled"],
       photoPosition: "before",
       inputType: "radio",
-      imageSrc: Step10Image,
+      // imageSrc: Step10Image,
     },
     {
       id: 11,
