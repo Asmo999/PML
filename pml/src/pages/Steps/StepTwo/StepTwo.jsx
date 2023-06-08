@@ -21,6 +21,7 @@ const StepTwo = () => {
     <>
       <div>
         <div>
+          <p>yay</p>
           <button>X</button>
         </div>
         <div>
