@@ -5,6 +5,7 @@ const StepThree = () => {
     <>
       <div>
         <div>
+ 
           <button>X</button>
         </div>
         <div>

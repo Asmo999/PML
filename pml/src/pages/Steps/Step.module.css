@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.money{
+  margin-left: 700px;
+  margin-top: -345px;
+  position: relative;
+  width: 509px;
+  height: 401px;
+}
+.txt h3{
+   font-weight: 600;
+   font-size: 55px;
+   line-height: 0px;
+   color: #10084F;
+}
+.txt h1{
+    font-weight: 350;
+    font-size: 55px;
+    line-height: 7cap;
+    letter-spacing: -3%;
+    color: #10084F;
+    margin-top: -20px;
+}
+.txt {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   margin-left: 70px;
+   margin-top: 150px;
+
+}
+.closebtn{
+    left: 1400px;
+    top: 50px;
+    position: absolute;
+}
+.closebtn button {
+    background: transparent;
+    border: none;
+    font-size: 30px; 
+    width: 50px; 
+    height: 40px; 
+    line-height: 1; 
+}
+input{
+    width: 50px;
+    height: 50px;
+
+}
+input[type='radio']:after {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: 1px;
+    top: 1px;
+    border-radius: 64px;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #db16ba;
+}
+input[type='radio']:checked:after {
+    position: relative;
+   background: linear-gradient(#D581BF, #A982DB);
+    content: '';
+    border: 2px solid rgb(196, 41, 180);
+}
+.progress{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -90px;
+}
+.arrow {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1100px;
+    gap: 30px;
+    margin-top: -80px;
+}
+.arrow button{   
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: white;
+    background-color: white;
+}
+.inp label {
+    font-weight: 400;
+    font-size: 36px;
+    position: relative;
+    top: -10px;
+    margin: 25px;
+    width: 181px;
+    height: 55px;
+}
+
+
+.left{
+    position: absolute;
+    margin-left: 90px;
+}
+.right{
+    position: relative;
+    left: 180px;
+}
