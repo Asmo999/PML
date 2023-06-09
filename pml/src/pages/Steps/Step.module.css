@@ -1,10 +1,11 @@
 body{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .money{
-  margin-left: 700px;
-  margin-top: -345px;
+  margin-left: 750px;
+  margin-top: -380px;
   position: relative;
   width: 509px;
   height: 401px;
@@ -27,14 +28,14 @@ body{
    display: flex;
    flex-direction: column;
    text-align: left;
-   margin-left: 70px;
-   margin-top: 150px;
-
+   margin-left: 148px;
+   margin-top: 140px;
 }
 .closebtn{
-    left: 1400px;
-    top: 50px;
-    position: absolute;
+    left: 1350px;
+    top: -80px;
+    position: relative;
+    width: 0px;
 }
 .closebtn button {
     background: transparent;
@@ -43,42 +44,55 @@ body{
     width: 50px; 
     height: 40px; 
     line-height: 1; 
+    position: absolute;
 }
-input{
+.inp input{
     width: 50px;
     height: 50px;
+    top: -7px;
+    position: relative;
 
 }
-input[type='radio']:after {
+.inp input[type='radio']:after {
     width: 45px;
     height: 45px;
     position: relative;
     left: 1px;
-    top: 1px;
     border-radius: 64px;
     content: '';
     display: inline-block;
     visibility: visible;
     border: 2px solid #db16ba;
 }
-input[type='radio']:checked:after {
+.inp input[type='radio']:checked:after {
     position: relative;
-   background: linear-gradient(#D581BF, #A982DB);
+    background: linear-gradient(#D581BF, #A982DB);
     content: '';
-    border: 2px solid rgb(196, 41, 180);
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 3px solid rgb(196, 41, 180);
+}
+.inp label {
+    font-weight: 400;
+    font-size: 36px;
+    position: relative;
+    top: -20px;
+    margin: 25px;
+    width: 181px;
+    height: 55px;
 }
 .progress{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: -90px;
+    position: relative;
+    margin-top: 70px;
+    margin-left: 20px;
 }
 .arrow {
     position: relative;
     display: flex;
     flex-direction: row;
-    margin-left: 1100px;
-    gap: 30px;
-    margin-top: -80px;
+    margin-left: 1150px;
+    gap: 20px;
+    margin-top: -90px;
 }
 .arrow button{   
     width: 60px;
@@ -87,22 +101,12 @@ input[type='radio']:checked:after {
     background-color: white;
     background-color: white;
 }
-.inp label {
-    font-weight: 400;
-    font-size: 36px;
-    position: relative;
-    top: -10px;
-    margin: 25px;
-    width: 181px;
-    height: 55px;
-}
-
-
 .left{
     position: absolute;
-    margin-left: 90px;
+    margin-left: 80px;
+  
 }
 .right{
     position: relative;
-    left: 180px;
+    left: 160px;
 }
