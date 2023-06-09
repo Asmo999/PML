@@ -1,16 +1,23 @@
 import React from "react";
-import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";;
+import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
+import stepThirteen from "./stepThirteen.module.css"
+import buttonX from "../../../images/xButton.svg";
+import arrow_left from "../../../images/arrow-left-circle.svg";
+import button from "../../../images/xButton.svg";
+import arrow_right from "../../../images/arrow-right-circle.svg";
 const StepThirteen = () => {
   return (
-    <div>
-      <div>
-        <button> X </button>
+    <div className={stepThirteen.container}>
+      <div className={stepThirteen.closeContainer}>
+        <button className={stepThirteen.button}> <img src={buttonX} alt="X"/></button>
       </div>
 
-      <div>
-        <h1>Step 13</h1>
-        <h3>Token Price</h3>
-        <div>
+      <div className={stepThirteen.content}>
+        <div className={stepThirteen.text}>
+          <h1>Step 13</h1>
+          <h3>Token Price</h3>
+        </div>
+        <div className={stepThirteen.inputs}>
           <div>
             <input type="text" placeholder="Info from NFT name page"/>
             <input type="Number" placeholder="Price" />
@@ -24,13 +31,12 @@ const StepThirteen = () => {
             <input type="Number" placeholder="Price" />
           </div>
         </div>
-        <button> + </button>
       </div>
-      <div>
+      <div className={stepThirteen.footer}>
         <CircularProgress value={13} max={14} />
-        <div>
-          <button>Arrow-Circle-Left</button>
-          <button>Arrow-Circle-Right</button>
+        <div className={stepThirteen.arrowButtons}>
+          <button> <img src={arrow_left} alt="Arrow-Circle-Left"/></button>
+          <button> <img src={arrow_right} alt="Arrow-Circle-Right"/></button>
         </div>
       </div>
     </div>
