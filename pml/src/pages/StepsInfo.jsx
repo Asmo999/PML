@@ -1,8 +1,8 @@
-import Step1Image from "../../src/images/stepFirst.svg";
-import Step2Image from "../../src/images/stepSecond.svg";
-import Step3Image from "../../src/images/stepThird.svg";
-import Step4Image from "../../src/images/stepFourth.svg";
-import Step5Image from "../../src/images/stepFifth.svg";
+import Step1Image from "../images/stepFirst.svg";
+import Step2Image from "../images/stepSecond.svg";
+import Step3Image from "../images/stepThird.svg";
+import Step4Image from "../images/stepFourth.svg";
+import Step5Image from "../images/stepFifth.svg";
 const steps = [
   {
     id: 1,

@@ -14,6 +14,7 @@ const StepSixVariantNo = () => {
       <div>
         <button> X </button>
       </div>
+
       <div>
         <h1>Step 6</h1>
         <h3>NFT name and quantity</h3>

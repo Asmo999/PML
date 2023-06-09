@@ -11,9 +11,7 @@ const Step = ({
   imageSrc,
   inputPlaceholder,
 }) => {
-    
   const Image = <img src={imageSrc} alt={`Step ${stepId}`} />;
-  console.log(selectedOption)
   return (
     <div>
       <div>
@@ -24,7 +22,7 @@ const Step = ({
       <h1>{title}</h1>
       {inputType === "radio" &&
         options.map((option, index) => (
-          <div key={`${title}-${index}`}>
+          <div key={index}>
             <input
               type="radio"
               id={`option-${stepId}-${index}`}
