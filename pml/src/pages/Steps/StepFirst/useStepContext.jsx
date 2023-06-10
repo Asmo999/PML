@@ -44,7 +44,6 @@ export const useStepContext = () => {
   }, []);
 
   const handleOptionChange = (stepId, option) => {
-    console.log("effect 5")
     setSelectedOptions(prevState => ({ ...prevState, [stepId]: option }));
     updateStepData({ [`step${stepId}Data`]: option });
 
@@ -52,6 +51,12 @@ export const useStepContext = () => {
       const newVariantSteps = option === 'Yes' ? stepsVariantYes : stepsVariantNo;
       setMaxStep(option === 'Yes' ? 9 : 14);
       setVariantStepsYesNo(newVariantSteps);
+      Object.keys(selectedOptions).forEach((key) => {
+        if (parseInt(key) > 5) {
+          console.log("j",selectedOptions[key])
+          delete selectedOptions[key];
+        }
+      });
     }
     if (stepId === 9) {
       console.log("container",baseSteps)

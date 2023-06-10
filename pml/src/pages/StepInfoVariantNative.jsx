@@ -15,14 +15,22 @@ const stepsVariantNative = [
     },
     {
       id: 11,
+      title: "Transaction Royalty amount",
+      photoPosition: "after",
+      inputType: "Number",
+      inputPlaceholder: "%",
+      imageSrc: Step3Image,
+    },
+    {
+      id: 12,
       title: "Token Price",
-      inputType: "file",
+      inputType: "tokenPTV",
       inputPlaceholderNumber: "Value",
       inputPlaceholder: "Type",
       inputCheck: "Text"
     },
     {
-      id: 12,
+      id: 13  ,
       title: "Are NFT-s 100% pre-minted?",
       options: ["Yes,push it on the market", "No,add custom features"],
       photoPosition: "after",

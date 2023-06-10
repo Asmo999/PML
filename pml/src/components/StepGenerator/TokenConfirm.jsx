@@ -4,7 +4,6 @@ const TokenConfirmStep = ({ stepId, title, imageSrc,handleOptionChange }) => {
   const Image = <img src={imageSrc} alt={`Step ${stepId}`} />;
   const [buttonSave,setButtonSave] = useState()
   useEffect(() => {
-    console.log(buttonSave)
     handleOptionChange(stepId,buttonSave)
   },[buttonSave])
   return (

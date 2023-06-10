@@ -13,7 +13,6 @@ const Step = ({
 }) => {
     
   const Image = <img src={imageSrc} alt={`Step ${stepId}`} />;
-  console.log(selectedOption)
   return (
     <div>
       <div>
@@ -34,17 +33,18 @@ const Step = ({
             <label htmlFor={`option-${stepId}-${index}`}>{option}</label>
           </div>
         ))}
-      {inputType === "text" && (
-        <div>
-          <input
-            type="text"
-            id={`option-${stepId}`}
-            value={selectedOption || ""}
-            placeholder={inputPlaceholder}
-            onChange={(e) => handleOptionChange(stepId, e.target.value)}
-          />
-        </div>
-      )}
+      {(inputType === "text" || inputType === "Number") && (
+  <div>
+    <input
+      type={inputType}
+      id={`option-${stepId}`}
+      value={selectedOption || ""}
+      placeholder={inputPlaceholder}
+      onChange={(e) => handleOptionChange(stepId, e.target.value)}
+    />
+  </div>
+)}
+
       {photoPosition === "after" && Image}
     </div>
   );

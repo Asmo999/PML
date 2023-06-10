@@ -10,7 +10,7 @@ const FileInputStep = ({
   handleOptionChange,
   selectedOption,
 }) => {
-  const initialElements = JSON.parse(localStorage.getItem(`fileInput-${stepId}`)) || [`fileInput-${stepId}-0`];
+  const initialElements = JSON.parse(sessionStorage.getItem(`fileInput-${stepId}`)) || [`fileInput-${stepId}-0`];
   const [elements, setElements] = useState(initialElements);;
   const previousStepValues = selectedOption[stepId - 1] || [];
   const onButtonClick = (id) => {
@@ -21,7 +21,7 @@ const FileInputStep = ({
     const newId = `fileInput-${stepId}-${elements.length}`;
     setElements((prevElements) => {
       const updatedElements = [...prevElements, newId];
-      localStorage.setItem(`fileInput-${stepId}`, JSON.stringify(updatedElements));
+      sessionStorage.setItem(`fileInput-${stepId}`, JSON.stringify(updatedElements));
       return updatedElements;
     });
   };

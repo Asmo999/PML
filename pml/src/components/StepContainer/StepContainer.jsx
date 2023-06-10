@@ -12,9 +12,7 @@ const StepContainer = ({
   handleOptionChange,
 }) => {
   const currentStepData = steps.find((step) => step.id === currentStep);
-  console.log(currentStep)
   console.log(steps)
-  console.log(currentStepData)
   if (currentStepData.tokenConfirm === "token") {
     return (
       <TokenConfirmStep

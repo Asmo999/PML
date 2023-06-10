@@ -15,7 +15,6 @@ export function StepProvider({ children }) {
             ...prevData,
             ...newData
         }));
-        console.log(stepData)
     }
 
     return (
