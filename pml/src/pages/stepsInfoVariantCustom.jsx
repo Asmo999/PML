@@ -4,25 +4,38 @@ import Step3Image from "../../src/images/stepThird.svg";
 import Step8Image from "../../src/images/stepSeventh.svg";
 import Step9Image from "../../src/images/stepPayment.svg";
 // import Step10Image from "../../src/images/stepTen.svg";
-const stepsVariantNative = [
+import step10Custom from "../../src/images/stepTenthCustom.svg";
+import Step12Image from "../../src/images/stepTwelfth.svg";
+import Step11Image from "../../src/images/stepEleventh.svg";
+
+
+const stepsVariantCustom = [
     {
       id: 10,
+      title: "Insert valid token address",
+      photoPosition: "before",
+      inputPlaceholder: "Token address",
+      inputType: "text",
+      imageSrc: step10Custom,
+    },
+    {
+      id: 11,
       title: "Transaction royalty",
       options: ["Without royalty", "Royalty enabled"],
       photoPosition: "before",
       inputType: "radio",
-      // imageSrc: Step10Image,
+      imageSrc: Step11Image,
     },
     {
-      id: 11,
+      id: 12,
       title: "Transaction Royalty amount",
       photoPosition: "after",
       inputType: "Number",
       inputPlaceholder: "%",
-      imageSrc: Step3Image,
+      imageSrc: Step12Image,
     },
     {
-      id: 12,
+      id: 13,
       title: "Token Price",
       inputType: "tokenPTV",
       inputPlaceholderNumber: "Price",
@@ -30,13 +43,12 @@ const stepsVariantNative = [
       inputCheck: "Text"
     },
     {
-      id: 13  ,
-      title: "Are NFT-s 100% pre-minted?",
-      options: ["Yes,push it on the market", "No,add custom features"],
-      photoPosition: "after",
-      inputType: "radio",
-      inputPlaceholder: "Smart Contract Standart",
+      id: 14,
+      title: "Confirmation to list the product",
+      photoPosition: "before",
+      inputPlaceholder: "Symbol",
       imageSrc: Step9Image,
-    },
+      confirm: "True"
+    } 
 ]
-export default stepsVariantNative
+export default stepsVariantCustom

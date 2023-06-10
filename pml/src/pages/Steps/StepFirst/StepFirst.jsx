@@ -7,7 +7,7 @@ import StepButton from "../../../components/StepButton/StepButton";
 
 const StepFirst = () => {
   const {maxStep, allSteps, currentStep, selectedOptions, handleOptionChange, buttonHandle} = useStepContext();
-
+  console.log("cr",currentStep)
   return (
     <>
       <StepContainer

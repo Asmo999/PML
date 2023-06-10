@@ -4,70 +4,69 @@ import steps from '../../StepsInfo';
 import stepsVariantYes from '../../StepInfoVariantYes';
 import stepsVariantNo from '../../StepInfoVariantNo';
 import stepsVariantNative from '../../StepInfoVariantNative';
-import stepsVariantCustom from '../../SmartContract';
+import stepsVariantCustom from '../../stepsInfoVariantCustom';
 
 export const useStepContext = () => {
   const { stepData, updateStepData } = useContext(StepContext);
   const [maxStep, setMaxStep] = useState(14);
+
   const initialSteps = JSON.parse(sessionStorage.getItem('allSteps')) || steps;
-  const [baseSteps, setBaseSteps] = useState(initialSteps);
-  const [variantStepsYesNo, setVariantStepsYesNo] = useState([]);
-  const [variantStepsNative, setVariantStepsNative] = useState([]);
-  const [currentStep, setCurrentStep] = useState(Number(sessionStorage.getItem('currentStep')) || 1);
-  const [selectedOptions, setSelectedOptions] = useState(JSON.parse(sessionStorage.getItem('selectedOptions')) || {});
+  const initialSelectedOptions = JSON.parse(sessionStorage.getItem('selectedOptions')) || {};
+  const initialCurrentStep = Number(sessionStorage.getItem('currentStep')) || 1;
+  
+  const [allSteps, setAllSteps] = useState(initialSteps);
+  const [currentStep, setCurrentStep] = useState(initialCurrentStep);
+  const [selectedOptions, setSelectedOptions] = useState(initialSelectedOptions);
 
+  // Update allSteps when selectedOptions change
   useEffect(() => {
-    sessionStorage.setItem('allSteps', JSON.stringify([...baseSteps, ...variantStepsYesNo, ...variantStepsNative]));
-    console.log("effect 3")
-  }, [baseSteps, variantStepsYesNo, variantStepsNative]);
+    const baseSteps = steps;
+    let variantStepsYesNo = [];
+    let variantStepsNative = [];
 
-  useEffect(() => {
-    sessionStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
-    console.log("effect 4")
+    if (selectedOptions[5]) {
+      variantStepsYesNo = selectedOptions[5] === "Yes" ? stepsVariantYes : stepsVariantNo;
+      setMaxStep(selectedOptions[5] === "Yes" ? 9 : 14);
+    }
+    if(selectedOptions[9]) {
+      variantStepsNative = selectedOptions[9] === "Native" ? stepsVariantNative : stepsVariantCustom;
+      setMaxStep(selectedOptions[9] === "Native" ? 13 : 14);
+    }
+    setAllSteps([...baseSteps, ...variantStepsYesNo, ...variantStepsNative]);
   }, [selectedOptions]);
 
   useEffect(() => {
-    console.log("effect 1")
-    const storedSelectedOptions = JSON.parse(sessionStorage.getItem('selectedOptions')) || {};
-    if (storedSelectedOptions[5]) {
-      const newVariantSteps = storedSelectedOptions[5] === "Yes" ? stepsVariantYes : stepsVariantNo;
-      setVariantStepsYesNo(newVariantSteps);
-      setMaxStep(storedSelectedOptions[5] === "Yes" ? 9 : 14);
-    }
-    if(storedSelectedOptions[9]) {
-      const newVariantSteps = storedSelectedOptions[9] === "Native" ? stepsVariantNative : stepsVariantCustom;
-      setVariantStepsNative(newVariantSteps);
-      setMaxStep(storedSelectedOptions[9] === "Native" ? 12 : 14);
-    }
-    setSelectedOptions(storedSelectedOptions);
-    setCurrentStep(Number(sessionStorage.getItem('currentStep')) || 1);
-  }, []);
+    sessionStorage.setItem('allSteps', JSON.stringify(allSteps));
+  }, [allSteps]);
+  
+
+  useEffect(() => {
+    sessionStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
+  }, [selectedOptions]);
 
   const handleOptionChange = (stepId, option) => {
     setSelectedOptions(prevState => ({ ...prevState, [stepId]: option }));
+    let newSelectedOptions = { ...selectedOptions, [stepId]: option };
     updateStepData({ [`step${stepId}Data`]: option });
 
-    if (stepId === 5) {
-      const newVariantSteps = option === 'Yes' ? stepsVariantYes : stepsVariantNo;
-      setMaxStep(option === 'Yes' ? 9 : 14);
-      setVariantStepsYesNo(newVariantSteps);
-      Object.keys(selectedOptions).forEach((key) => {
-        if (parseInt(key) > 5) {
-          console.log("j",selectedOptions[key])
-          delete selectedOptions[key];
+    // Reset the steps beyond the current one when changing options
+    if (stepId === 5 || stepId === 9) {
+      Object.keys(newSelectedOptions).forEach((key) => {
+        if (parseInt(key) > stepId) {
+          newSelectedOptions[key] = ""; // Or set it to "" if that works better for your use case
         }
       });
-    }
-    if (stepId === 9) {
-      console.log("container",baseSteps)
-      const newVariantSteps = option === 'Native' ? stepsVariantNative : stepsVariantCustom;
-      setMaxStep(option === 'Native' ? 12 : 14);
-      setVariantStepsNative(newVariantSteps);
+      setSelectedOptions(newSelectedOptions);
+      const newSteps = allSteps.filter(step => step.id <= stepId);
+      setAllSteps(newSteps);
+      if (initialSteps.length === newSteps.length) {
+        sessionStorage.setItem('allSteps', JSON.stringify(newSteps));
+      }
     }
   };
 
   const buttonHandle = (direction) => {
-    if (direction === "next" && currentStep < baseSteps.length + variantStepsYesNo.length + variantStepsNative.length) {
+    if (direction === "next" && currentStep < allSteps.length) {
       setCurrentStep(currentStep + 1);
       sessionStorage.setItem('currentStep', currentStep + 1);
     } else if (direction === "prev" && currentStep > 1) {
@@ -76,5 +75,5 @@ export const useStepContext = () => {
     }
   };
 
-  return {maxStep, allSteps: [...baseSteps, ...variantStepsYesNo, ...variantStepsNative], currentStep, selectedOptions, handleOptionChange, buttonHandle};
+  return {maxStep, allSteps, currentStep, selectedOptions, handleOptionChange, buttonHandle};
 };

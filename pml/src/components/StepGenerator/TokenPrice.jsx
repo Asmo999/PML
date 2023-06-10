@@ -4,7 +4,8 @@ const TokenPriceAndType = ({ stepId, title, selectedOption, inputPlaceholderNumb
   const [nameValues, setNameValues] = useState([]);
 
   useEffect(() => {
-    const previousStepValues = selectedOption[stepId - 1] || [];
+    const previousStepValues = selectedOption[6] || [];
+    console.log("prev",previousStepValues)
     const names = previousStepValues.map(option => option['name']);
     setNameValues(names);
   }, [selectedOption, stepId]);

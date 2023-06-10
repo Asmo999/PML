@@ -1,7 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import SmartContract from "./pages/SmartContract";
 import StepFirst from "./pages/Steps/StepFirst/StepFirst";
 import StepTwo from "./pages/Steps/StepTwo/StepTwo";
 import StepThree from "./pages/Steps/StepThree/StepThree";
@@ -30,9 +28,8 @@ function App() {
     <StepProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<SmartContract />} />
           <Route path="/step1" element={<StepFirst />} />
-          <Route path="/step2" element={<StepTwo />} />
+          {/* <Route path="/step2" element={<StepTwo />} />
           <Route path="/step3" element={<StepThree />} />
           <Route path="/step4" element={<StepFour />} />
           <Route path="/step5" element={<StepFive />} />
@@ -51,7 +48,7 @@ function App() {
           <Route path="/step12-custom" element={<StepTwelveVarintCustom />} />
           <Route path="/step12-native" element={<StepTwelveVaraintNative />} />
           <Route path="/step13" element={<StepThirteen />} />
-          <Route path="/step14" element={<StepFourteen />} />
+          <Route path="/step14" element={<StepFourteen />} /> */}
         </Routes>
       </Router>
     </StepProvider>
