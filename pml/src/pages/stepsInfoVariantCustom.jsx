@@ -2,7 +2,7 @@ import Step1Image from "../../src/images/stepFirst.svg";
 import Step2Image from "../../src/images/stepSecond.svg";
 import Step3Image from "../../src/images/stepThird.svg";
 import Step8Image from "../../src/images/stepSeventh.svg";
-import Step9Image from "../../src/images/stepPayment.svg";
+import Step9Image from "../../src/images/stepNineth.svg";
 // import Step10Image from "../../src/images/stepTen.svg";
 import step10Custom from "../../src/images/stepTenthCustom.svg";
 import Step12Image from "../../src/images/stepTwelfth.svg";
@@ -45,7 +45,7 @@ const stepsVariantCustom = [
     {
       id: 14,
       title: "Confirmation to list the product",
-      photoPosition: "before",
+      photoPosition: "after",
       inputPlaceholder: "Symbol",
       imageSrc: Step9Image,
       confirm: "True"

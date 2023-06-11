@@ -22,7 +22,7 @@ const steps = [
   },
   {
     id: 3,
-    title: "Enter your email address",
+    title: "Insert smart contract name",
     photoPosition: "after",
     inputType: "text",
     inputPlaceholder: "Smart Contract Standart",
@@ -30,7 +30,7 @@ const steps = [
   },
   {
     id: 4,
-    title: "Insert smart contract name",
+    title: "Insert the abbreviation",
     photoPosition: "before",
     inputType: "text",
     inputPlaceholder: "Symbol",

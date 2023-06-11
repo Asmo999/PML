@@ -26,17 +26,15 @@
       },
       {
         id: 8,
-        title: "Enter your email address",
-        photoPosition: "after",
-        inputType: "text",
-        inputPlaceholder: "Smart Contract Standart",
-        imageSrc: Step3Image,
+        title: "Choose the martket to push",
+        inputType: "radio",
+        options: ["Market Name", "Market Name","Market Name","Market Name","Market Name","Market Name"],
         confirm: "False"
       },
       {
         id: 9,
         title: "Confirmation to list the product",
-        photoPosition: "before",
+        photoPosition: "after",
         inputPlaceholder: "Symbol",
         imageSrc: Step9Image,
         confirm: "True"

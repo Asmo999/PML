@@ -1,9 +1,9 @@
 //StepFirst.js
 import React from "react";
 import { useStepContext } from './useStepContext';
-import StepContainer from "../../../components/StepContainer/StepContainer";
-import ProgressBar from "../../../components/RadialProgressBar/ProgressBar";
-import StepButton from "../../../components/StepButton/StepButton";
+import StepContainer from "../../components/StepContainer/StepContainer";
+import ProgressBar from "../../components/RadialProgressBar/ProgressBar";
+import StepButton from "../../components/StepButton/StepButton";
 
 const StepFirst = () => {
   const {maxStep, allSteps, currentStep, selectedOptions, handleOptionChange, buttonHandle} = useStepContext();

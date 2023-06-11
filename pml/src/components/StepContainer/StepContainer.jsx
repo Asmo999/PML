@@ -26,7 +26,7 @@ const StepContainer = ({
       />
     );
   }
-  else if (currentStepData.id === 9) {
+  else if (steps.length === currentStep) {
     return (
       <ConfirmationStep
         key={currentStep}
@@ -59,6 +59,7 @@ const StepContainer = ({
         selectedOption={selectedOptions}
         inputPlaceholderNumber={currentStepData.inputPlaceholderNumber}
         handleOptionChange={handleOptionChange}
+        TypeCheck={currentStepData.typeCheck}
       />
     );
   }

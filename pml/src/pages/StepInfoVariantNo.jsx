@@ -18,7 +18,7 @@ const stepsVariantNo = [
       inputType: "tokenPTV",
       inputPlaceholderNumber: "Value",
       inputPlaceholder: "Type",
-      inputCheck: "Text"
+      typeCheck:"True"
     },
     {
       id: 8,

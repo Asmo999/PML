@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import { StepContext } from '../../../StepContext';
-import steps from '../../StepsInfo';
-import stepsVariantYes from '../../StepInfoVariantYes';
-import stepsVariantNo from '../../StepInfoVariantNo';
-import stepsVariantNative from '../../StepInfoVariantNative';
-import stepsVariantCustom from '../../stepsInfoVariantCustom';
+import { StepContext } from '../../StepContext';
+import steps from '../StepsInfo';
+import stepsVariantYes from '../StepInfoVariantYes';
+import stepsVariantNo from '../StepInfoVariantNo';
+import stepsVariantNative from '../StepInfoVariantNative';
+import stepsVariantCustom from '../stepsInfoVariantCustom';
 
 export const useStepContext = () => {
   const { stepData, updateStepData } = useContext(StepContext);

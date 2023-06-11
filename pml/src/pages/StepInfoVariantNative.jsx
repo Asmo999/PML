@@ -2,7 +2,7 @@ import Step1Image from "../../src/images/stepFirst.svg";
 import Step2Image from "../../src/images/stepSecond.svg";
 import Step3Image from "../../src/images/stepThird.svg";
 import Step8Image from "../../src/images/stepSeventh.svg";
-import Step9Image from "../../src/images/stepPayment.svg";
+import Step9Image from "../../src/images/stepNineth.svg";
 // import Step10Image from "../../src/images/stepTen.svg";
 const stepsVariantNative = [
     {
@@ -30,13 +30,12 @@ const stepsVariantNative = [
       inputCheck: "Text"
     },
     {
-      id: 13  ,
-      title: "Are NFT-s 100% pre-minted?",
-      options: ["Yes,push it on the market", "No,add custom features"],
+      id: 13,
+      title: "Confirmation to list the product",
       photoPosition: "after",
-      inputType: "radio",
-      inputPlaceholder: "Smart Contract Standart",
+      inputPlaceholder: "Symbol",
       imageSrc: Step9Image,
-    },
+      confirm: "True"
+    } 
 ]
 export default stepsVariantNative
