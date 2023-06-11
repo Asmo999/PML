@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button {
+    background: none;
+    border: none;
+}
+
+.closeContainer {
+    margin-left: auto;
+    margin-bottom: 10px;
+
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60rem;
+    height: fit-content;
+    margin-top: 100px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1,h3 {
+    margin: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: stretch;
+    width: 100%;
+    margin-top: 50px;
+}
+.arrowButtons {
+    margin-left: auto;
+
+}
+
+input[type=text]{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 80px;
+    border-radius: 17px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+    border: 2px solid #D482C1;
+    padding-left: 10px;
+}
+
+input[type=number]{
+    border: 2px solid #D482C1;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    border-radius: 17px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
