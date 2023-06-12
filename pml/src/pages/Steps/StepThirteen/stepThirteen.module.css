@@ -87,8 +87,6 @@ input[type=number]{
 }
 .inputs {
     overflow-y: scroll;
-
-
 }
 
 ::-webkit-scrollbar {
