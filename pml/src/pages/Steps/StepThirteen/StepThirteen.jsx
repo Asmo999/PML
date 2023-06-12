@@ -1,7 +1,6 @@
 import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
 import stepThirteen from "./stepThirteen.module.css"
-import buttonX from "../../../images/xButton.svg";
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import button from "../../../images/xButton.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
@@ -9,9 +8,8 @@ const StepThirteen = () => {
   return (
     <div className={stepThirteen.container}>
       <div className={stepThirteen.closeContainer}>
-        <button className={stepThirteen.button}> <img src={buttonX} alt="X"/></button>
+        <button className={stepThirteen.button}> <img src={button} alt="X"/></button>
       </div>
-
       <div className={stepThirteen.content}>
         <div className={stepThirteen.text}>
           <h1>Step 13</h1>
