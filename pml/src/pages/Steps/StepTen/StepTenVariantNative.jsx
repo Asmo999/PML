@@ -2,7 +2,6 @@ import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
 import stepEleven from "../StepEleven/stepEleven.module.css";
 import button from "../../../images/xButton.svg";
-// import computerPoster from "../../../images/stepTen.svg";
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
 const StepTenVariantNative = () => {
