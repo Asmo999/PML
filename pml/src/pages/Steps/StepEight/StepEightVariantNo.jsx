@@ -19,11 +19,11 @@ const StepEightVariantNo = () => {
           <div className={stepEight.option}>
             <div>
               <input type="radio" name="Check-Radio" id="Yes-Check-Radio" />
-              <label htmlFor="Yes-Check-Radio">Yes, push it on the market</label>
+              <label className={stepEight.lbl} htmlFor="Yes-Check-Radio">Yes, push it on the market</label>
             </div>
-            <div>
+            <div className={stepEight.divs}>
               <input type="radio" name="Check-Radio" id="No-Check-Radio" />
-              <label htmlFor="No-Check-Radio">No, add custom features</label>
+              <label className={stepEight.lbl} htmlFor="No-Check-Radio">No, add custom features</label>
             </div>
           </div>
         </div>

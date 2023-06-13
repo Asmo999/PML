@@ -78,6 +78,10 @@ body {
 .inputs {
     overflow-y: scroll;
 }
+.option label{
+    position: relative;
+    top: -4px;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
