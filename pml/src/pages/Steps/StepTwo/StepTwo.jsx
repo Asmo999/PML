@@ -24,6 +24,9 @@ const StepTwo = () => {
           <button>X</button>
         </div>
         <div>
+          <p>ravici aba :d</p>
+        </div>
+        <div>
           <div>
             <h3>Step 2</h3>
             <h1>Choose smart contract standart</h1>
