@@ -33,7 +33,7 @@ const StepFive = () => {
           </div>
           <img src={man} alt="Man-Screen" />
         </div>
-
+        
         <div className={stepFive.footer}>
           <CircularProgress value={5} max={14} />
           <div className={stepFive.arrowButtons}>
