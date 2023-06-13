@@ -1,71 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+
+}
+.container {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-top: 25px;
+    height: 600px;
 }
 
-.button {
+button {
     background: none;
     border: none;
 }
 
 .closeContainer {
     margin-left: auto;
-    margin-bottom: 30px;
-    padding-top: 0;
-    margin-top: -20px;
-
+    margin-bottom: 50px;
+    margin-right: -200px;
 }
 
-.container {
+
+.button>img {
+    height: 30px;
+    width: 30px;
+
+}
+.footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 60rem;
-    height: fit-content;
-    margin-top: 100px;
+    margin-right: -200px;
+    margin-left: -200px;
+    padding: 0;
+    height: 60px;
+;
+
 }
+
 
 .text {
     display: flex;
-   margin-right: 20px;
+    margin-right: 20px;
     flex-direction: column;
-margin-top: 0;
+    margin-top: 0;
 }
-h1,h3 {
-    margin-left: 0px;
+
+h1, h3 {
+    margin-left: 0;
 }
+
 .content {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 450px;
+    margin-top: 50px;
+
+}
+.content>img {
+    width: 500px;
+    height: 500px;
+    margin-left: 60px;
 
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: stretch;
-    width: 100%;
-    height: fit-content;
-    margin-top: 10px;
-    margin-left: -40px;
-    padding-left: 0;
-}
 .arrowButtons {
     margin-left: auto;
 
 }
-.poster{
-    width: fit-content;
-    height: fit-content;
-}
-.poster>img {
-    width: 500px;
-    height: 500px;
-}
+
+
+
