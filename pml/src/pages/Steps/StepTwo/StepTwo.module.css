@@ -1,0 +1,56 @@
+.closebtn button{
+    position: relative;
+    left: 1045px;
+    top: 50px;
+    font-size: 30px;
+   
+}
+.moneyimg {
+    height: 370px;
+    width: 480px;
+    position: relative;
+    top: 25px;
+
+}
+.flx{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 90px;
+}
+.radioinp label{
+    width: 181px;
+    height: 55px;
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+.radioinp{
+    margin-top: 30px;
+}
+.radioinp input{
+    width: 40px;
+    height: 40px;
+}
+.txt h1 {
+    line-height: 40px;
+    text-align: left;
+    font-size: 35px;
+}
+.progres{
+
+    margin-left: -100px;
+    margin-top: 50px;
+    height: 60px;
+    width: 60px;
+}
+.movebtn{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-left: 1030px;
+    margin-top: -95px;
+
+}
