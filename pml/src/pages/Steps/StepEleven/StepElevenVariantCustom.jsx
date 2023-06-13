@@ -1,7 +1,7 @@
 import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
 import button from "../../../images/xButton.svg";
-import computerPoster from "../../../images/stepTen.svg"
+// import computerPoster from "../../../images/stepTen.svg"
 import stepEleven from "./stepEleven.module.css"
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
@@ -15,7 +15,7 @@ const StepElevenVariantCustom = () => {
           <button className={stepEleven.button}><img src={button} alt="X"/></button>
         </div>
         <div className={stepEleven.content}>
-          <img src={computerPoster} alt="Man-Screen" />
+          {/* <img src={computerPoster} alt="Man-Screen" /> */}
           <div className={stepEleven.text}>
             <h3>Step 11</h3>
             <h1>Transaction royalty</h1>
@@ -26,7 +26,7 @@ const StepElevenVariantCustom = () => {
               </div>
               <div>
                 <input  type="radio" name="Check-Radio" id="No-Check-Radio" value="No"/>
-                <label htmlFor="No-Check-Radio">Royalty enabled</label>
+                <label  htmlFor="No-Check-Radio">Royalty enabled</label>
               </div>
             </div>
           </div>

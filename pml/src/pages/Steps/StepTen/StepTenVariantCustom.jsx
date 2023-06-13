@@ -13,7 +13,8 @@ const StepTenVariantCustom = () => {
           <button className={stepTen.button}><img src={button} alt="X"/></button>
         </div>
         <div className={stepTen.content}>
-          <div className={stepTen.poster}><img src={poster} alt="computer-blockchain" /></div>
+          <div className={stepTen.poster}>
+             <img src={poster} alt="computer-blockchain" /></div> 
           <div className={stepTen.text}>
             <div>
             <h3>Step 10</h3>
