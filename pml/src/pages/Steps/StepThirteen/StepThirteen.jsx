@@ -6,6 +6,7 @@ import button from "../../../images/xButton.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
 const StepThirteen = () => {
   return (
+      <>
     <div className={stepThirteen.container}>
       <div className={stepThirteen.closeContainer}>
         <button className={stepThirteen.button}> <img src={button} alt="X"/></button>
@@ -30,14 +31,16 @@ const StepThirteen = () => {
           </div>
         </div>
       </div>
-      <div className={stepThirteen.footer}>
-        <CircularProgress value={13} max={14} />
-        <div className={stepThirteen.arrowButtons}>
-          <button> <img src={arrow_left} alt="Arrow-Circle-Left"/></button>
-          <button> <img src={arrow_right} alt="Arrow-Circle-Right"/></button>
-        </div>
-      </div>
+
     </div>
+        <div className={stepThirteen.footer}>
+          <CircularProgress value={13} max={14} />
+          <div className={stepThirteen.arrowButtons}>
+            <button> <img src={arrow_left} alt="Arrow-Circle-Left"/></button>
+            <button> <img src={arrow_right} alt="Arrow-Circle-Right"/></button>
+          </div>
+        </div>
+      </>
   );
 };
 export default StepThirteen;
