@@ -1,0 +1,38 @@
+.cnt{
+    margin-top: 50px;
+}
+
+
+.closebtn button{
+    position: relative;
+    left: 1100px;
+    top: 50px;
+    font-size: 30px;
+}
+.flx{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 150px;
+}
+.flx h1{
+    margin-top: 130px;
+    font-size: 40px;
+    margin-left: 20px;
+}
+.flx button {
+    height: 69px;
+    width: 272px;
+    border-radius: 36px;
+    background: linear-gradient( to right,  #D480BE, #A582DC);
+    color: white;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+.walletimg {
+    
+    height:508px;
+    width: 485px;
+}

@@ -23,7 +23,7 @@ const StepTwo = () => {
   }
   return (
     <>
-      <div>
+      <div className={StepTwoCss.cnt}>
         <div className={StepTwoCss.closebtn}>
           <button>X</button>
         </div>

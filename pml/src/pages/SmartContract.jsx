@@ -1,17 +1,19 @@
 import React from "react";
+import Wallet from "./Steps/wallet/wallet.module.css";
+import WalletImg from "./../images/wallet.png"
 const SmartContract = () => {
   return (
     <>
-      <div>
-        <div>
-          <button><img src="" alt="decline"/></button>
+      <div className={Wallet.cnt}>
+        <div className={Wallet.closebtn}>
+          <button>X</button>
         </div>
-        <div >
+        <div className={Wallet.flx}>
           <div>
-            <h1>Add Wallet before start</h1>
+            <h1>Add Wallet before <br></br> start</h1>
             <button>Add Wallet</button>
           </div>
-          <img src="" alt="Girl-Wallet" />
+          <img className={Wallet.walletimg} src={WalletImg} alt="Girl-Wallet" />
         </div>
       </div>
     </>
