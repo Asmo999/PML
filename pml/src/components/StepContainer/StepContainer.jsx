@@ -5,6 +5,7 @@ import ConfirmationStep from "../StepGenerator/ConfirmationStep";
 import FileInputStep from "../StepGenerator/FileInputStep";
 import TokenConfirmStep from "../StepGenerator/TokenConfirm";
 import TokenPriceAndType from "../StepGenerator/TokenPrice";
+import RadioInputStep from "../StepGenerator/RadioInputStep";
 const StepContainer = ({
   steps,
   currentStep,
@@ -12,8 +13,9 @@ const StepContainer = ({
   handleOptionChange,
 }) => {
   console.log("this ",steps)
+  console.log("it came here")
   const currentStepData = steps.find((step) => step.id === currentStep);
-  console.log(currentStepData)
+  console.log("current",currentStepData.inputType)
   if (currentStepData.tokenConfirm === "token") {
     return (
       <TokenConfirmStep
@@ -23,6 +25,19 @@ const StepContainer = ({
         handleOptionChange={handleOptionChange}
         imageSrc={currentStepData.imageSrc}
         
+      />
+    );
+  }
+  else if (currentStepData.inputType === "radio") {
+    return (
+      <RadioInputStep
+        key={currentStep}
+        stepId={currentStepData.id}
+        title={currentStepData.title}
+        handleConfirm={handleOptionChange}
+        imageSrc={currentStepData.imageSrc}
+        options={currentStepData.options}
+        handleOptionChange={handleOptionChange}
       />
     );
   }
@@ -36,7 +51,8 @@ const StepContainer = ({
         imageSrc={currentStepData.imageSrc}
       />
     );
-  } else if (steps[currentStep - 1].inputType === "file") {
+  } 
+  else if (steps[currentStep - 1].inputType === "file") {
     return (
       <FileInputStep
         key={currentStep}

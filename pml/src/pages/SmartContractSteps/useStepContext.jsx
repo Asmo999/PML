@@ -17,8 +17,6 @@ export const useStepContext = () => {
   const [allSteps, setAllSteps] = useState(initialSteps);
   const [currentStep, setCurrentStep] = useState(initialCurrentStep);
   const [selectedOptions, setSelectedOptions] = useState(initialSelectedOptions);
-
-  // Update allSteps when selectedOptions change
   useEffect(() => {
     const baseSteps = steps;
     let variantStepsYesNo = [];
@@ -49,11 +47,10 @@ export const useStepContext = () => {
     let newSelectedOptions = { ...selectedOptions, [stepId]: option };
     updateStepData({ [`step${stepId}Data`]: option });
 
-    // Reset the steps beyond the current one when changing options
     if (stepId === 5 || stepId === 9) {
       Object.keys(newSelectedOptions).forEach((key) => {
         if (parseInt(key) > stepId) {
-          newSelectedOptions[key] = ""; // Or set it to "" if that works better for your use case
+          newSelectedOptions[key] = "";
         }
       });
       setSelectedOptions(newSelectedOptions);

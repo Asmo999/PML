@@ -42,7 +42,6 @@ const steps = [
     options: ["Yes", "No"],
     photoPosition: "after",
     inputType: "radio",
-    inputPlaceholder: "Symbol",
     imageSrc: Step5Image,
   },
 ];
