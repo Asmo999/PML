@@ -14,7 +14,7 @@ const StepSevenVariantYes = () => {
         </div>
         <div className={stepEight.content}>
           <div className={stepEight.text}>
-            <h3>Step 8</h3>
+            <h3>Step 7</h3>
             <h1>Are NFT-s 100% pre-minted?</h1>
             <div className={stepEight.option}>
               <div>
