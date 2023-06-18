@@ -1,4 +1,8 @@
 import React from "react";
+import Leftarrow from "../../../images/Leftarrow.png";
+import Rightarrow from "../../../images/rightarrow.png";
+import Moneyicon from "../../../images/money.png";
+import StepTwoCss from "./StepTwo.module.css";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
 import { useContext } from "react";
 import { useState } from "react";
@@ -19,15 +23,16 @@ const StepTwo = () => {
   }
   return (
     <>
-      <div>
-        <div>
+      <div className={StepTwoCss.cnt}>
+        <div className={StepTwoCss.closebtn}>
           <button>X</button>
         </div>
         <div>
-          <div>
+          <div className={StepTwoCss.flx}>
+          <div className={StepTwoCss.txt}>
             <h3>Step 2</h3>
-            <h1>Choose smart contract standart</h1>
-            <div>
+            <h1>Choose smart contract <br></br> standart</h1>
+            <div className={StepTwoCss.radioinp}>
               <div>
                 <input type="radio" name="ERC-721-radio" id="ERC-721-radio" checked={coin === "ERC721"} onChange={stepDataUpdate} value="ERC721"/>
                 <label htmlFor="ERC-721-radio">ERC 721</label>
@@ -38,13 +43,15 @@ const StepTwo = () => {
               </div>
             </div>
           </div>
-          <img src="" alt="Money-B" />
+          <img className={StepTwoCss.moneyimg} src={Moneyicon} alt="Money-B" />
+          </div>
         </div>
-        <div>
+        <div className={StepTwoCss.progres}>
           <CircularProgress value={2} max={14} />
-          <div>
-            <button>Arrow-Circle-Left</button>
-            <button onClick={buttonHandle}>Arrow-Circle-Right</button>
+          <div className={StepTwoCss.movebtn}>
+
+            <button><img src={Leftarrow} alt="" /></button>
+            <button onClick={buttonHandle}><img src={Rightarrow} alt="" /></button>
           </div>
         </div>
       </div>
