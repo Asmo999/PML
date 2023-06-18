@@ -40,6 +40,7 @@ const StepEightVariantNo = () => {
                     <button><img src={arrow_right} alt="Arrow-Circle-Right"/></button>
                 </div>
             </div>
+
         </>
     );
 };
