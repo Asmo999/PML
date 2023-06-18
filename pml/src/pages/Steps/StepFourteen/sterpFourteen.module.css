@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
 
 .container {
     width: 60rem;
-    height: content-box;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     padding-right: 0;
     padding-top: 25px;
+
+    height: 600px;
 }
 button {
     background: none;
@@ -15,7 +24,8 @@ button {
 
 .closeContainer {
     margin-left: auto;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-right: -200px;
 }
 
 
@@ -26,12 +36,12 @@ button {
 
 .footer {
     display: flex;
-
     flex-direction: row;
     align-items: center;
-    margin-right: -20px;
-    margin-left: -35px;
+    margin-right: -200px;
+    margin-left: -200px;
     padding: 0;
+    height: 60px;
 }
 
 
@@ -71,9 +81,8 @@ h1 {
 
 .option {
     font-size: 30px;
-
-
 }
+
 .arrowButtons {
     margin-left: auto;
 

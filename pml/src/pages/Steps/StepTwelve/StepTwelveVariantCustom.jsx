@@ -18,9 +18,7 @@ const StepTwelveVarintCustom = () => {
             <h1>Transaction royalty amount</h1>
             <input type="number" placeholder="%"/>
           </div >
-          <div className={stepTwelve.poster}>
           <img src={poster} alt="B-Float" />
-          </div>
         </div>
         <div className={stepTwelve.footer}>
           <CircularProgress value={3} max={14} />

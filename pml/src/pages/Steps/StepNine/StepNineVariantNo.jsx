@@ -20,7 +20,6 @@ const StepNineVariantNo = () => {
               <button>Native tokens</button>
               <button>Custom ERC20</button>
             </div>
-
           </div>
           <img src={poster} alt="Man-Screen" />
         </div>
