@@ -69,6 +69,7 @@ h1 {
 .content {
     display: flex;
     padding: 0;
+    height: 600px;
 
 
 }
@@ -103,3 +104,4 @@ input[type=radio]:checked {
     background: linear-gradient(180deg, #D581BF 0%, #A982DB 100%);
 
 }
+
