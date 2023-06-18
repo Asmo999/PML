@@ -2,7 +2,6 @@ import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
 import stepEleven from "../StepEleven/stepEleven.module.css";
 import button from "../../../images/xButton.svg";
-import computerPoster from "../../../images/stepTen.svg";
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
 const StepTenVariantNative = () => {
@@ -13,7 +12,7 @@ const StepTenVariantNative = () => {
           <button className={stepEleven.button}><img src={button} alt="X"/></button>
         </div>
         <div className={stepEleven.content}>
-          <img src={computerPoster} alt="Man-Screen" />
+          {/* <img src={computerPoster} alt="Man-Screen" /> */}
           <div className={stepEleven.text}>
             <h3>Step 10</h3>
             <h1>Transaction royalty</h1>

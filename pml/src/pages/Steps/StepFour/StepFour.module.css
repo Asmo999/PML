@@ -1,0 +1,47 @@
+.cnt{
+    margin-top: 50px;
+}
+
+.closebtn button{
+    position: relative;
+    left: 1190px;
+    top: 50px;
+    font-size: 30px;
+}
+.flx{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-left: 50px;
+}
+.flx h3{
+    margin-top: 220px;
+}
+.flx h1{
+    margin-top: -15px;
+    font-size: 40px;
+}
+.flx input{
+    position: relative;
+    left: -10px;
+}
+.girlimg{
+    position: relative;
+    top: 30px;
+    width: 450px;
+    height: 500px;
+    margin-left: 80px;
+}
+.progress{
+    margin-left: -30px;
+}
+.movebtn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+    left: 1107px;
+    top: -90px;
+    height: 0px;
+    width: 0px;
+}

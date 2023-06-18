@@ -1,0 +1,60 @@
+.cnt{
+    margin-top: 50px;
+}
+.closebtn button{
+    position: relative;
+    left: 1075px;
+    top: 50px;
+    font-size: 30px;
+}
+.txts {
+    display: flex;
+    flex-direction: column;
+}
+.txts h1 {
+    margin-top: -10px;
+    line-height: 48px;
+    font-size: 35px;
+}
+.txts input{
+    position: relative;
+    height: 55px;
+    top: 10px;
+    left: -10px;
+    height: 60px;
+    border-radius: 10px;
+    width: 452px;
+
+}
+.flx{
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+}
+.floatimg{
+    position: relative;
+    top: -120px;
+    width: 400px;
+    height: 480px;
+}
+.progress{
+    margin-top: -100px;
+    margin-left: -150px;
+}
+.movebtn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+    left: 1112px;
+    top: -90px;
+    width: 0px;
+    height: 0px;
+}
+.b{
+    width: 50px;
+    height: 55px;
+    position: relative;
+    left: 225px;
+    top: 30px;
+}
