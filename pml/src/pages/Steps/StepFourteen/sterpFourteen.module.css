@@ -14,10 +14,10 @@ body {
     padding-left: 20px;
     padding-right: 0;
     padding-top: 25px;
-
     height: 600px;
 }
-button {
+
+.button {
     background: none;
     border: none;
 }

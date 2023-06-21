@@ -14,10 +14,10 @@ body {
     padding-left: 20px;
     padding-right: 0;
     padding-top: 25px;
-
     height: 600px;
 }
-button {
+
+.button {
     background: none;
     border: none;
 }
@@ -33,7 +33,6 @@ button {
     height: 30px;
     width: 30px;
 }
-
 .footer {
     display: flex;
     flex-direction: row;
@@ -78,55 +77,29 @@ h1 {
     justify-content: center;
 
 }
+
+.option {
+    font-size: 30px;
+}
+
 .arrowButtons {
     margin-left: auto;
 
 }
-
-.option {
-    margin-top: 15px;
-    font-size: 21px;
-    margin-bottom: 5px;
-    justify-content: center;
-    align-items: center;
+.arrowButtons>button{
     padding: 0;
-    height: fit-content;
+}
+.confirm {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0;
+    display: inline-block;
+    background: linear-gradient(270deg, #A582DC 8.7%, #D480BE 76.55%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
 
 }
-.lbl{
-    margin-top: -5px;
-}
-
-.inputs {
-    overflow-y: scroll;
-}
-
-.option label{
-    position: relative;
-    top: -4px;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 6px;
-
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-
-::-webkit-scrollbar-button {
-    background: #555;
-}
-
-
-
-::-webkit-scrollbar-track {
-    background: #929292;
-    border-radius: 6px;
-    height: 20px;
-
-}
-

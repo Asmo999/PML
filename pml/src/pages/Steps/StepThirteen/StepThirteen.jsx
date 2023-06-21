@@ -18,20 +18,19 @@ const StepThirteen = () => {
         </div>
         <div className={stepThirteen.inputs}>
           <div>
-            <input type="text" placeholder="Info from NFT name page"/>
-            <input type="Number" placeholder="Price" />
+            <input className={stepThirteen.input_text} type="text" placeholder="Info from NFT name page"/>
+            <input className={stepThirteen.input_num} type="Number" placeholder="Price" />
           </div>
           <div>
-            <input type="text" placeholder="Info from NFT name page"/>
-            <input type="Number" placeholder="Price" />
+            <input className={stepThirteen.input_text} type="text" placeholder="Info from NFT name page"/>
+            <input className={stepThirteen.input_num} type="Number" placeholder="Price" />
           </div>
           <div>
-            <input type="text" placeholder="Info from NFT name page"/>
-            <input type="Number" placeholder="Price" />
+            <input className={stepThirteen.input_text} type="text" placeholder="Info from NFT name page"/>
+            <input className={stepThirteen.input_num} type="Number" placeholder="Price" />
           </div>
         </div>
       </div>
-
     </div>
         <div className={stepThirteen.footer}>
           <CircularProgress value={13} max={14} />

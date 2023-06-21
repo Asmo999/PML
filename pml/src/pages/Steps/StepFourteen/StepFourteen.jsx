@@ -4,6 +4,7 @@ import stepFourteen from "./sterpFourteen.module.css"
 import buttonX from "../../../images/xButton.svg"
 import manScreen from "../../../images/stepNine.svg"
 import arrow_left from  "../../../images/arrow-left-circle.svg"
+
 const StepFourteen = () => {
   return (
       <>

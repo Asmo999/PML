@@ -5,6 +5,7 @@ import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
 import poster from "../../../images/stepTwelve.svg"
 import stepTwelve from "./stepTwelve.module.css"
+import stepThirteen from "../StepThirteen/stepThirteen.module.css";
 const StepTwelveVarintCustom = () => {
   return (
     <>
@@ -16,7 +17,7 @@ const StepTwelveVarintCustom = () => {
           <div className={stepTwelve.text}>
             <h3>Step 12</h3>
             <h1>Transaction royalty amount</h1>
-            <input type="number" placeholder="%"/>
+            <input className={stepThirteen.input_num} type="number" placeholder="%"/>
           </div >
           <img src={poster} alt="B-Float" />
         </div>

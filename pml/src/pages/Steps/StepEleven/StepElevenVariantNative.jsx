@@ -6,9 +6,10 @@ import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
 
 
-;
+
 const StepElevenVariantNative = () => {
     return (
+        <>
         <div className={stepThirteen.container}>
             <div className={stepThirteen.closeContainer}>
                 <button className={stepThirteen.button}><img src={button} alt="X"/></button>
@@ -20,19 +21,20 @@ const StepElevenVariantNative = () => {
                 </div>
                 <div className={stepThirteen.inputs}>
                     <div>
-                        <input type="text" placeholder="Info from NFT name page"/>
-                        <input type="Number" placeholder="Price"/>
+                        <input className={stepThirteen.input_text}  type="text" placeholder="Info from NFT name page"/>
+                        <input className={stepThirteen.input_num} type="Number" placeholder="Price"/>
                     </div>
                     <div>
-                        <input type="text" placeholder="Info from NFT name page"/>
-                        <input type="Number" placeholder="Price"/>
+                        <input className={stepThirteen.input_text}  type="text" placeholder="Info from NFT name page"/>
+                        <input className={stepThirteen.input_num} type="Number" placeholder="Price"/>
                     </div>
                     <div>
-                        <input type="text" placeholder="Info from NFT name page"/>
-                        <input type="Number" placeholder="Price"/>
+                        <input className={stepThirteen.input_text}  type="text" placeholder="Info from NFT name page"/>
+                        <input className={stepThirteen.input_num} type="Number" placeholder="Price"/>
                     </div>
                 </div>
             </div>
+        </div>
             <div className={stepThirteen.footer}>
                 <CircularProgress value={7} max={14}/>
                 <div className={stepThirteen.arrowButtons}>
@@ -40,7 +42,8 @@ const StepElevenVariantNative = () => {
                     <button><img src={arrow_right} alt="Arrow-Circle-Right"/></button>
                 </div>
             </div>
-        </div>
+
+        </>
     );
 };
 export default StepElevenVariantNative;

@@ -15,7 +15,7 @@ const StepElevenVariantCustom = () => {
           <button className={stepEleven.button}><img src={button} alt="X"/></button>
         </div>
         <div className={stepEleven.content}>
-          {/* <img src={computerPoster} alt="Man-Screen" /> */}
+           <img src={computerPoster} alt="Man-Screen" />
           <div className={stepEleven.text}>
             <h3>Step 11</h3>
             <h1>Transaction royalty</h1>

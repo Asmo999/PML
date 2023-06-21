@@ -5,6 +5,7 @@ import stepTen from "./stepTen.module.css"
 import poster from "../../../images/stepTen2.svg"
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
+import stepThirteen from "../StepThirteen/stepThirteen.module.css";
 
 const StepTenVariantCustom = () => {
     return (
@@ -21,7 +22,7 @@ const StepTenVariantCustom = () => {
                             <h1>Insert valid token address</h1>
                         </div>
                         <div className={stepTen.input}>
-                            <input type="text" placeholder="Token address"/>
+                            <input  className={stepThirteen.input_text} type="text" placeholder="Token address"/>
                         </div>
                     </div>
                 </div>
