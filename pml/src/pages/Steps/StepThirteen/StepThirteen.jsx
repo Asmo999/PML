@@ -1,15 +1,16 @@
 import React from "react";
 import CircularProgress from "../../../components/RadialProgressBar/RadialProgressBar";
-import stepThirteen from "./stepThirteen.module.css"
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import button from "../../../images/xButton.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
+import common from "../../common.module.css"
+import stepThirteen from "./stepThirteen.module.css"
 const StepThirteen = () => {
   return (
       <>
-    <div className={stepThirteen.container}>
-      <div className={stepThirteen.closeContainer}>
-        <button className={stepThirteen.button}> <img src={button} alt="X"/></button>
+    <div className={common.container}>
+      <div className={common.closeContainer}>
+        <button className={common.button}> <img src={button} alt="X"/></button>
       </div>
       <div className={stepThirteen.content}>
         <div className={stepThirteen.text}>
@@ -32,9 +33,9 @@ const StepThirteen = () => {
         </div>
       </div>
     </div>
-        <div className={stepThirteen.footer}>
+        <div className={common.footer}>
           <CircularProgress value={13} max={14} />
-          <div className={stepThirteen.arrowButtons}>
+          <div className={common.arrowButtons}>
             <button> <img src={arrow_left} alt="Arrow-Circle-Left"/></button>
             <button> <img src={arrow_right} alt="Arrow-Circle-Right"/></button>
           </div>

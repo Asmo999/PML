@@ -28,7 +28,6 @@ body {
     margin-right: -200px;
 }
 
-
 .button>img {
     height: 30px;
     width: 30px;
@@ -39,7 +38,6 @@ body {
     align-items: center;
     margin-right: -200px;
     margin-left: -200px;
-    padding: 0;
     height: 60px;
 }
 
@@ -48,12 +46,9 @@ h3 {
     font-size: 40px;
     line-height: 80px;
     color:#10084F;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 h1 {
     color: #10084F;
-    margin-top: 0;
     padding-top: 0;
     font-style: normal;
     font-weight: lighter;
@@ -62,21 +57,24 @@ h1 {
 .content {
     display: flex;
     padding: 0;
+    height: 450px;
+    margin-top: 50px;
+    gap: 50px;
 
 }
-.content>img {
-    width: 450px;
-    height: 500px;
-    margin-left: 60px;
-
-}
-
 .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
 
 }
+
+.content>img {
+    width: 450px;
+    height: 500px;
+}
+
 
 .option {
     font-size: 30px;
@@ -86,9 +84,15 @@ h1 {
     margin-left: auto;
 
 }
-.arrowButtons>button{
+
+
+.input {
     padding: 0;
+    margin-left: -15px;
+
 }
+
+
 .confirm {
     font-family: 'Poppins', sans-serif;
     margin-left: 0;

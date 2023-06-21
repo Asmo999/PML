@@ -5,15 +5,16 @@ import buttonX from "../../../images/xButton.svg";
 import stepNine from "./stepNine.module.css"
 import arrow_left from "../../../images/arrow-left-circle.svg";
 import arrow_right from "../../../images/arrow-right-circle.svg";
+import common from "../../common.module.css"
 const StepNineVariantNo = () => {
   return (
     <>
-      <div className={stepNine.container}>
-        <div className={stepNine.closeContainer}>
-          <button className={stepNine.button}><img src={buttonX} alt="X"/></button>
+      <div className={common.container}>
+        <div className={common.closeContainer}>
+          <button className={common.button}><img src={buttonX} alt="X"/></button>
         </div>
-        <div className={stepNine.content}>
-          <div className={stepNine.text}>
+        <div className={common.content}>
+          <div className={common.text}>
             <h3>Step 9</h3>
             <h1>Choose payment method</h1>
             <div className={stepNine.buttons}>
@@ -23,9 +24,9 @@ const StepNineVariantNo = () => {
           </div>
           <img src={poster} alt="Man-Screen" />
         </div>
-        <div className={stepNine.footer}>
+        <div className={common.footer}>
           <CircularProgress value={9} max={14} />
-          <div className={stepNine.arrowButtons}>
+          <div className={common.arrowButtons}>
             <button> <img src={arrow_left} alt="Arrow-Circle-Left"/></button>
             <button> <img src={arrow_right} alt="Arrow-Circle-Right"/></button>
           </div>

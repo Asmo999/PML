@@ -1,98 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-
-}
-.container {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 0;
-    padding-top: 25px;
-    height: 600px;
-
-}
-
-button {
-    background: none;
-    border: none;
-}
-
-.closeContainer {
-    margin-left: auto;
-    margin-bottom: 50px;
-    margin-right: -200px;
-}
 
 
-.button>img {
-    height: 30px;
-    width: 30px;
-
-}
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: -200px;
-    margin-left: -200px;
-    padding: 0;
-    height: 60px;
-
-}
-.content>img {
+.img {
     width: 500px;
     height: 500px;
-
-}
-
-h3 {
-    font-size: 40px;
-    line-height: 80px;
-    color:#10084F;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-h1 {
-    color: #10084F;
-    margin-top: 0;
-    padding-top: 0;
-    font-style: normal;
-    font-weight: lighter;
-}
-
-.content {
-    display: flex;
-    padding: 0;
-    height: 600px;
-
-
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 50px;
-
+    margin-left: -20px;
+    margin-right: 50px;
+    margin-top: -20px;
 }
 
 .option {
     font-size: 30px;
 }
 
-
-.arrowButtons {
-    margin-left: auto;
-
-}
-
-input[type=radio] {
+.radio {
     appearance: none;
     padding: 10px;
     background-color: #ffffff;
@@ -100,7 +20,7 @@ input[type=radio] {
     border: solid 2px #D581BF;
     margin-right: 20px;
 }
-input[type=radio]:checked {
+.radio:checked {
     background: linear-gradient(180deg, #D581BF 0%, #A982DB 100%);
 
 }
