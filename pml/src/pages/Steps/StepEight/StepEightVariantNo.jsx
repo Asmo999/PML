@@ -17,19 +17,19 @@ const StepEightVariantNo = () => {
                 <div className={common.content}>
                     <div className={common.text}>
                         <h3>Step 8</h3>
-                        <h1>Are NFT-s 100% pre-minted?</h1>
+                        <h1>Are NFT-s 100% <br/>pre-minted?</h1>
                         <div className={stepEight.option}>
                             <div>
-                                <input type="radio" name="Check-Radio" id="Yes-Check-Radio"/>
-                                <label htmlFor="Yes-Check-Radio">Yes, push it on the market</label>
+                                <input className={common.input} type="radio" name="Check-Radio" id="Yes-Check-Radio"/>
+                                <label className={stepEight.label} htmlFor="Yes-Check-Radio">Yes, push it on the market</label>
                             </div>
                             <div>
-                                <input type="radio" name="Check-Radio" id="No-Check-Radio"/>
-                                <label htmlFor="No-Check-Radio">No, add custom features</label>
+                                <input className={common.input} type="radio" name="Check-Radio" id="No-Check-Radio"/>
+                                <label className={stepEight.label}  htmlFor="No-Check-Radio">No, add custom features</label>
                             </div>
                         </div>
                     </div>
-                    <img src={posterNft} alt="NFT-coin"/>
+                    <img id={stepEight.image} src={posterNft} alt="NFT-coin"/>
                 </div>
 
             </div>

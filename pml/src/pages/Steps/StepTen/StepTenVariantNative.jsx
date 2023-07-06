@@ -20,11 +20,11 @@ const StepTenVariantNative = () => {
             <h1>Transaction royalty</h1>
             <div className={stepEleven.option}>
               <div>
-                <input  type="radio" name="Check-Radio" id="Yes-Check-Radio" value="Yes"/>
+                <input className={common.input} type="radio" name="Check-Radio" id="Yes-Check-Radio" value="Yes"/>
                 <label htmlFor="Yes-Check-Radio">without royalty</label>
               </div>
               <div>
-                <input  type="radio" name="Check-Radio" id="No-Check-Radio" value="No"/>
+                <input className={common.input} type="radio" name="Check-Radio" id="No-Check-Radio" value="No"/>
                 <label htmlFor="No-Check-Radio">Royalty enabled</label>
               </div>
             </div>

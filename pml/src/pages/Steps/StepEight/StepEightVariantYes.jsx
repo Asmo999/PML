@@ -13,28 +13,30 @@ const StepEightVariantYes = () => {
         <button className={common.button}><img src={button} alt="X"/></button>
       </div>
 
-      <div>
+      <div className={stepEight.box}>
+        <div className={stepEight.box_txt}>
         <h1>Step 8</h1>
         <h3>Choose the market to push</h3>
+        </div>
         <div className={stepEight.inputs}>
-          <div className={stepEight.input}>
-            <input type="radio" name="Market-radio" id="Market-radio" />
+          <div>
+            <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
             <label  htmlFor="Market-radio">Market name</label>
           </div>
-          <div className={stepEight.input}>
-            <input type="radio" name="Market-radio" id="Market-radio" />
+          <div>
+            <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
             <label htmlFor="Market-radio">Market name</label>
           </div>
-          <div className={stepEight.input}>
-            <input type="radio" name="Market-radio" id="Market-radio" />
+          <div>
+            <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
             <label  htmlFor="Market-radio">Market name</label>
           </div>
-          <div className={stepEight.input}>
-            <input type="radio" name="Market-radio" id="Market-radio" />
+          <div>
+            <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
             <label  htmlFor="Market-radio">Market name</label>
           </div>
-          <img id={stepEight.img}  src={poster} alt="poster"/>
         </div>
+        <img id={stepEight.img}  src={poster} alt="poster"/>
       </div>
       <div className={common.footer}>
         <CircularProgress value={8} max={14} />

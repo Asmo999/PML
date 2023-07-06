@@ -21,7 +21,7 @@ const StepTenVariantCustom = () => {
                             <h3>Step 10</h3>
                             <h1>Insert valid token address</h1>
                         </div>
-                        <div className={common.input}>
+                        <div >
                             <input  className={stepThirteen.input_text} type="text" placeholder="Token address"/>
                         </div>
                     </div>

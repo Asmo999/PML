@@ -1,49 +1,42 @@
 
-.content>img {
-    width: 450px;
-    height: 500px;
-    margin-left: 60px;
+.box {
+    width: 900px;
+    margin-left: -60px;
 
 }
-
-.text {
+#image {
+    width: 750px;
+    height: 420px;
+}
+#img {
+    height: 250px;
+    margin-left: 175px;
+}
+.box_txt {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-}
-.arrowButtons {
-    margin-left: auto;
-
-}
-
-.option {
-    margin-top: 15px;
-    font-size: 21px;
-    margin-bottom: 5px;
-    justify-content: center;
     align-items: center;
-    padding: 0;
-    height: fit-content;
-
+    justify-content: center;
 }
-.input {
-
-}
-
 .inputs {
     display: block;
     overflow-y: scroll;
+    margin-left: 175px;
 }
 
-.inputs label {
-    position: relative;
-    top: -7px;
+.option{
+    margin-top: 30px;
+    margin-left: -3px;
+    padding: 0;
+
 }
-.option label{
+.label{
+    font-size: larger;
     position: relative;
     top: -4px;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 10px;
