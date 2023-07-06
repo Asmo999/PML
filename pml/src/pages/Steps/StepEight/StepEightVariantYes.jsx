@@ -21,19 +21,19 @@ const StepEightVariantYes = () => {
         <div className={stepEight.inputs}>
           <div>
             <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
-            <label  htmlFor="Market-radio">Market name</label>
+            <label className={stepEight.label} htmlFor="Market-radio">Market name</label>
           </div>
           <div>
             <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
-            <label htmlFor="Market-radio">Market name</label>
+            <label className={stepEight.label} htmlFor="Market-radio">Market name</label>
           </div>
           <div>
             <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
-            <label  htmlFor="Market-radio">Market name</label>
+            <label className={stepEight.label} htmlFor="Market-radio">Market name</label>
           </div>
           <div>
             <input className={common.input} type="radio" name="Market-radio" id="Market-radio" />
-            <label  htmlFor="Market-radio">Market name</label>
+            <label className={stepEight.label} htmlFor="Market-radio">Market name</label>
           </div>
         </div>
         <img id={stepEight.img}  src={poster} alt="poster"/>
