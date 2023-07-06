@@ -1,74 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.button {
-    background: none;
-    border: none;
-}
-
-.closeContainer {
-    margin-left: auto;
-    margin-bottom: 50px;
-    margin-right: -200px;
-}
-
-.container {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 0;
-    padding-top: 25px;
-    height: 600px;
-
-}
-
 .text {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: -40px;
 }
 h1,h3 {
+    padding: 0;
     margin: 0;
 }
+
 .content {
-    display: flex;
     flex-direction: column;
-    height: fit-content;
-    align-items: center;
-    border: solid red 3px;
-    height: 750px;
-
-}
-.button>img {
-    height: 30px;
-    width: 30px;
-
-}
-
-.footer {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-right: -200px;
-    margin-left: -200px;
-    padding: 0;
-    height: 60px;
-
-}
-.arrowButtons {
-    margin-left: auto;
-
+    justify-content: center;
+    height: 750px;
+    margin-top: -110px;
 }
 
-input[type=text]{
+.input_text {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -78,12 +29,12 @@ input[type=text]{
     box-sizing: border-box;
     width: 500px;
     height: 50px;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     border: 2px solid #D482C1;
     padding-left: 10px;
 }
 
-input[type=number]{
+.input_num {
     border: 2px solid #D482C1;
     box-sizing: border-box;
     width: 200px;

@@ -1,109 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 0;
-    padding-top: 25px;
-
-    height: 600px;
-}
-button {
-    background: none;
-    border: none;
-}
-
-.closeContainer {
-    margin-left: auto;
-    margin-bottom: 50px;
-    margin-right: -200px;
-}
-
-
-.button>img {
-    height: 30px;
-    width: 30px;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: -200px;
-    margin-left: -200px;
-    padding: 0;
-    height: 60px;
-}
-
-
-h3 {
-    font-size: 40px;
-    line-height: 80px;
-    color:#10084F;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-h1 {
-    color: #10084F;
-    margin-top: 0;
-    padding-top: 0;
-    font-style: normal;
-    font-weight: lighter;
-}
-
-.content {
-    display: flex;
-    padding: 0;
+.box {
+    width: 900px;
+    margin-left: -60px;
 
 }
-.content>img {
-    width: 450px;
-    height: 500px;
-    margin-left: 60px;
-
+#image {
+    width: 750px;
+    height: 420px;
 }
-
-.text {
+#img {
+    height: 250px;
+    margin-left: 175px;
+}
+.box_txt {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-}
-.arrowButtons {
-    margin-left: auto;
-
-}
-
-.option {
-    margin-top: 15px;
-    font-size: 21px;
-    margin-bottom: 5px;
-    justify-content: center;
     align-items: center;
-    padding: 0;
-    height: fit-content;
-
+    justify-content: center;
 }
-.lbl{
-    margin-top: -5px;
-}
-
 .inputs {
+    display: block;
     overflow-y: scroll;
+    margin-left: 175px;
 }
-.option label{
+
+.option{
+    margin-top: 30px;
+    margin-left: -3px;
+    padding: 0;
+
+}
+.label{
+    font-size: larger;
     position: relative;
     top: -4px;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -112,12 +45,12 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the thumb */
+    background: #888;
 }
 
-/* Style the button (not supported in all browsers) */
+
 ::-webkit-scrollbar-button {
-    background: #555; /* Color of the button */
+    background: #555;
 }
 
 
@@ -129,7 +62,3 @@ h1 {
 
 }
 
-
-#img {
-    height: 290px;
-}

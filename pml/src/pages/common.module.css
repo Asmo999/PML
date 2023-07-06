@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
@@ -6,8 +5,8 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-
 }
+
 .container {
     width: 60rem;
     display: flex;
@@ -16,13 +15,17 @@ body {
     padding-right: 0;
     padding-top: 25px;
     height: 600px;
-
 }
 
+.button {
+    background: none;
+    border: none;
+}
 button {
     background: none;
     border: none;
 }
+
 
 .closeContainer {
     margin-left: auto;
@@ -30,11 +33,9 @@ button {
     margin-right: -200px;
 }
 
-
 .button>img {
     height: 30px;
     width: 30px;
-
 }
 .footer {
     display: flex;
@@ -42,27 +43,17 @@ button {
     align-items: center;
     margin-right: -200px;
     margin-left: -200px;
-    padding: 0;
     height: 60px;
-
 }
-.content>img {
-     width: 500px;
-     height: 500px;
-     margin-left: 60px;
 
- }
 
 h3 {
     font-size: 40px;
     line-height: 80px;
     color:#10084F;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 h1 {
     color: #10084F;
-    margin-top: 0;
     padding-top: 0;
     font-style: normal;
     font-weight: lighter;
@@ -71,40 +62,59 @@ h1 {
 .content {
     display: flex;
     padding: 0;
+    height: 450px;
+    margin-top: 50px;
+    gap: 50px;
 
 }
-
-
 .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
+
 }
+
+.content>img {
+    width: 450px;
+    height: 500px;
+}
+
 
 .option {
-    font-size: 30px;
-
-
+    font-size: 50px;
 }
+
 .arrowButtons {
     margin-left: auto;
 
 }
 
-input[type=radio] {
+.input {
     appearance: none;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 50%;
     border: solid 2px #D581BF;
     margin-right: 5px;
+
 }
-input[type=radio]:checked {
+.input:checked {
     background: linear-gradient(180deg, #D581BF 0%, #A982DB 100%);
 
 }
 
+.confirm {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0;
+    display: inline-block;
+    background: linear-gradient(270deg, #A582DC 8.7%, #D480BE 76.55%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
 
-
-
-
+}
