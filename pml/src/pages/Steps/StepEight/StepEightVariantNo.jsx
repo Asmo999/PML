@@ -39,8 +39,8 @@ const StepEightVariantNo = () => {
                     <button><img src={arrow_left} alt="Arrow-Circle-Left"/></button>
                     <button><img src={arrow_right} alt="Arrow-Circle-Right"/></button>
                 </div>
-
             </div>
+
         </>
     );
 };

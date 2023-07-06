@@ -27,7 +27,7 @@ const StepElevenVariantCustom = () => {
               </div>
               <div>
                 <input  type="radio" name="Check-Radio" id="No-Check-Radio" value="No"/>
-                <label  htmlFor="No-Check-Radio">Royalty enabled</label>
+                <label htmlFor="No-Check-Radio">Royalty enabled</label>
               </div>
             </div>
           </div>
